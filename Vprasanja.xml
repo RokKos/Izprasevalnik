@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vprasanja xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ShemaVprasanj.xsd">
+  <letnik>2
+    <predmet>
+      Kombinatorika
+      <poglavje>
+        Testno
+        <vprasanje>
+          Neki
+          <vsebina>Test 1</vsebina>
+          <odgovor>Test odgovor 1</odgovor>
+          <tezavnost>1</tezavnost>
+        </vprasanje>
+        <vprasanje>
+          Neki2
+          <vsebina>Test 2</vsebina>
+          <odgovor>Test odgovor 2</odgovor>
+          <tezavnost>2</tezavnost>
+        </vprasanje>
+        <vprasanje>
+          Neki3
+          <vsebina>Test 3</vsebina>
+          <odgovor>Test odgovor 3</odgovor>
+          <tezavnost>3</tezavnost>
+        </vprasanje>
+      </poglavje>
+    </predmet>
+  </letnik>
+</Vprasanja>

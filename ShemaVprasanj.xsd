@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- definition of simple elements -->
+  <xs:element name="odgovor" type="xs:string"/>
+  <xs:element name="vsebina" type="xs:string"/>
+  <xs:element name="tezavnost" type="xs:positiveInteger"/>
+  <!-- <xs:element name="datum_lekcije" type="xs:date"/> -->
+
+  <!-- definition of complex elements -->
+  <xs:element name="vprasanje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vsebina"/>
+        <xs:element  ref="odgovor" maxOccurs="unbounded" minOccurs="1"/>
+        <xs:element ref="tezavnost" minOccurs="0"/>
+        <!--<xs:element ref="datum_lekcije" minOccurs="0"/> -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="poglavje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element  ref="vprasanje" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="predmet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element  ref="poglavje" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="letnik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element  ref="predmet" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Vprasanja">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element  ref="letnik" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
